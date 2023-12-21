@@ -1,4 +1,9 @@
 <script lang="ts">
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
+
+  import { PUBLIC_API_URL } from "$env/static/public";
   import { DownloadCloud, Trash2, CircleDashed } from "lucide-svelte";
   export let files: any[] = [];
 
@@ -8,16 +13,17 @@
   };
 
   const handleDelete = async (file: any) => {
-    const response = await fetch(
-      `https://zvpyqtm84h.execute-api.us-east-1.amazonaws.com/file/${file.id}`,
-      {
-        method: "DELETE",
-      }
-    );
+    const response = await fetch(`${PUBLIC_API_URL}/file/${file.id}`, {
+      method: "DELETE",
+    });
 
     const data = await response.json();
-    if (data.status === 200) {
-      files = files.filter((f) => f.id !== file.id);
+    console.log("data", data);
+
+    if (response.status === 200) {
+      console.log("coming inside delete");
+      // files = files.filter((f) => f.id !== file.id);
+      dispatch("delete", file.id);
     }
   };
 
@@ -48,14 +54,14 @@
       </div>
 
       <div class="flex items-center">
+        <button
+          on:click={() => {
+            handleDelete(file);
+          }}
+        >
+          <Trash2 class="cursor-pointer mx-1" />
+        </button>
         {#if file.isUploaded}
-          <button
-            on:click={() => {
-              handleDelete(file);
-            }}
-          >
-            <Trash2 class="cursor-pointer mx-1" />
-          </button>
           <button
             on:click={() => {
               handleDownload(file);
