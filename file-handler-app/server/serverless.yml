@@ -1,0 +1,109 @@
+service: file-upload-service
+frameworkVersion: "3"
+
+package:
+  excludeDevDependencies: true
+  individually: true
+  patterns:
+    - "!node_modules/@aws-sdk/**"
+    - "!node_modules/aws-sdk/**"
+    - "!node_modules/**/node_modules/aws-sdk/**"
+    - "!node_modules/**/node_modules/@aws-sdk/**"
+    - "!node_modules/**/node_modules/**/node_modules/aws-sdk/**"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  timeout: 60
+  httpApi:
+    cors: true
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "*"
+    - Effect: "Allow"
+      Action:
+        - "lambda:InvokeFunction"
+      Resource: "*"
+    - Effect: "Allow"
+      Action:
+        - "kms:Decrypt"
+      Resource: "*"
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:PutItem"
+        - "dynamodb:GetItem"
+        - "dynamodb:DeleteItem"
+        - "dynamodb:Scan"
+      Resource: "*"
+  environment:
+    AWS_S3_BUCKET: file-upload-gm-bucket
+functions:
+  s3EventHandler:
+    handler: src/s3-event-handler.handler
+    events:
+      - s3:
+          bucket: file-upload-gm-bucket
+          event: s3:ObjectCreated:*
+          existing: true
+  httpApiHandler:
+    handler: src/handler.handler
+    events:
+      - httpApi: "*" # catch-all route
+
+resources:
+  Resources:
+    S3Bucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: file-upload-gm-bucket
+        CorsConfiguration:
+          CorsRules:
+            - AllowedOrigins:
+                - "*"
+              AllowedHeaders:
+                - "*"
+              AllowedMethods:
+                - GET
+                - PUT
+                - POST
+                - DELETE
+                - HEAD
+              MaxAge: 3000
+    UploadHandleTopic:
+      Type: AWS::SNS::Topic
+      Properties:
+        TopicName: file-srv-topic
+    FilesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: files
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+          - AttributeName: originalFileName
+            AttributeType: S
+        GlobalSecondaryIndexes:
+          - IndexName: FileNameIndex
+            KeySchema:
+              - AttributeName: originalFileName
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+            ProvisionedThroughput:
+              ReadCapacityUnits: 1
+              WriteCapacityUnits: 1
+
+custom:
+  defaultRegion: us-east-1
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript

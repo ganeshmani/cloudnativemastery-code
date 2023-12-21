@@ -1,0 +1,8 @@
+file-handler-app/client/node_modules
+file-handler-app/server/node_modules
+file-handler-app/server/.serverless
+
+fullstack-monorepo/node_modules
+fullstack-monorepo/packages/api/node_modules
+fullstack-monorepo/packages/types/node_modules
+fullstack-monorepo/packages/web/node_modules

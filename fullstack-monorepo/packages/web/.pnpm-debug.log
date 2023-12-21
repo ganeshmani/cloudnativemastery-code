@@ -1,0 +1,1365 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 4,
+    "total": 4,
+    "workspacePrefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "file-upload-event-consistency",
+      "version": "1.0.0",
+      "description": "Handling file upload in cloud native application",
+      "main": "index.js",
+      "scripts": {
+        "start": "pnpm --stream -r start",
+        "start:dev": "pnpm --stream -r run start:dev",
+        "clean": "rm -rf .parcel-cache && pnpm -r run clean"
+      },
+      "author": "",
+      "license": "ISC"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "2 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "types",
+      "version": "1.0.0",
+      "main": "./src/index.ts",
+      "exports": "./src/index.ts",
+      "types": "./src/index.ts",
+      "scripts": {
+        "type-check": "tsc"
+      },
+      "devDependencies": {
+        "typescript": "^4.9.4"
+      }
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency/packages/types"
+  },
+  "3 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "api",
+      "scripts": {
+        "build": "npx tsc",
+        "start": "node dist/index.js",
+        "start:dev": "nodemon src/index.ts",
+        "type-check": "tsc"
+      },
+      "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.2"
+      },
+      "devDependencies": {
+        "@types/cors": "^2.8.13",
+        "@types/express": "^4.17.15",
+        "esbuild": "^0.17.0",
+        "nodemon": "^3.0.2",
+        "ts-node": "^10.9.2",
+        "tsx": "^3.12.2",
+        "types": "workspace:*",
+        "typescript": "^4.9.4"
+      }
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency/packages/api"
+  },
+  "4 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "web",
+      "version": "0.0.1",
+      "private": true,
+      "scripts": {
+        "start:dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+        "test": "vitest",
+        "lint": "eslint ."
+      },
+      "devDependencies": {
+        "@sveltejs/adapter-auto": "^3.0.0",
+        "@sveltejs/kit": "^2.0.0",
+        "@sveltejs/vite-plugin-svelte": "^3.0.0",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "eslint": "^8.28.0",
+        "eslint-plugin-svelte": "^2.30.0",
+        "svelte": "^4.2.7",
+        "svelte-check": "^3.6.0",
+        "tslib": "^2.4.1",
+        "typescript": "^5.0.0",
+        "vite": "^5.0.3",
+        "vitest": "^1.0.0"
+      },
+      "type": "module"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency/packages/web"
+  },
+  "5 debug pnpm:context": {
+    "currentLockfileExists": true,
+    "storeDir": "/Users/ganeshmani/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency/node_modules/.pnpm"
+  },
+  "6 debug pnpm:stage": {
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "stage": "resolution_started"
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../types",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "types",
+      "rawSpec": "workspace:*"
+    }
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/cors/2.8.17",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "@types/cors",
+      "rawSpec": "^2.8.13"
+    }
+  },
+  "9 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/express/4.17.21",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "@types/express",
+      "rawSpec": "^4.17.15"
+    }
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/nodemon/3.0.2",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "nodemon",
+      "rawSpec": "^3.0.2"
+    }
+  },
+  "11 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/esbuild/0.17.19",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "esbuild",
+      "rawSpec": "^0.17.0"
+    }
+  },
+  "12 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tsx/3.14.0",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "tsx",
+      "rawSpec": "^3.12.2"
+    }
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ts-node/10.9.2",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "ts-node",
+      "rawSpec": "^10.9.2"
+    }
+  },
+  "14 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/typescript/4.9.5",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "typescript",
+      "rawSpec": "^4.9.4"
+    }
+  },
+  "15 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/express/4.18.2",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "express",
+      "rawSpec": "^4.18.2"
+    }
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cors/2.8.5",
+    "wanted": {
+      "dependentId": "packages/api",
+      "name": "cors",
+      "rawSpec": "^2.8.5"
+    }
+  },
+  "17 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/cors/2.8.17",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "18 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/cors/2.8.17",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "19 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/express/4.17.21",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "20 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/express/4.17.21",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "21 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/nodemon/3.0.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "22 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/nodemon/3.0.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "23 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/esbuild/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "24 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/esbuild/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "25 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ts-node/10.9.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "26 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ts-node/10.9.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "27 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tsx/3.14.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "28 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tsx/3.14.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "29 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/typescript/4.9.5",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "30 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/typescript/4.9.5",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "31 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cors/2.8.5",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "32 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cors/2.8.5",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "33 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/express/4.18.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "34 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/express/4.18.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "35 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/minimatch/3.1.2",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "minimatch",
+      "rawSpec": "^3.1.2"
+    }
+  },
+  "36 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ignore-by-default/1.0.1",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "ignore-by-default",
+      "rawSpec": "^1.0.1"
+    }
+  },
+  "37 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/pstree.remy/1.1.8",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "pstree.remy",
+      "rawSpec": "^1.1.8"
+    }
+  },
+  "38 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chokidar/3.5.3",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "chokidar",
+      "rawSpec": "^3.5.2"
+    }
+  },
+  "39 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/debug/4.3.4",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "debug",
+      "rawSpec": "^4"
+    }
+  },
+  "40 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/touch/3.1.0",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "touch",
+      "rawSpec": "^3.1.0"
+    }
+  },
+  "41 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/simple-update-notifier/2.0.0",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "simple-update-notifier",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "42 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/semver/7.5.4",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "semver",
+      "rawSpec": "^7.5.3"
+    }
+  },
+  "43 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/supports-color/5.5.0",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "supports-color",
+      "rawSpec": "^5.5.0"
+    }
+  },
+  "44 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/undefsafe/2.0.5",
+    "wanted": {
+      "dependentId": "/nodemon/3.0.2",
+      "name": "undefsafe",
+      "rawSpec": "^2.0.5"
+    }
+  },
+  "45 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@cspotcode/source-map-support/0.8.1",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "@cspotcode/source-map-support",
+      "rawSpec": "^0.8.0"
+    }
+  },
+  "46 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@tsconfig/node10/1.0.9",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "@tsconfig/node10",
+      "rawSpec": "^1.0.7"
+    }
+  },
+  "47 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@tsconfig/node14/1.0.3",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "@tsconfig/node14",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "48 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@tsconfig/node12/1.0.11",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "@tsconfig/node12",
+      "rawSpec": "^1.0.7"
+    }
+  },
+  "49 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@tsconfig/node16/1.0.4",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "@tsconfig/node16",
+      "rawSpec": "^1.0.2"
+    }
+  },
+  "50 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/arg/4.1.3",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "arg",
+      "rawSpec": "^4.1.0"
+    }
+  },
+  "51 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/create-require/1.1.1",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "create-require",
+      "rawSpec": "^1.1.0"
+    }
+  },
+  "52 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/acorn/8.11.2",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "acorn",
+      "rawSpec": "^8.4.1"
+    }
+  },
+  "53 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/acorn-walk/8.3.1",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "acorn-walk",
+      "rawSpec": "^8.1.1"
+    }
+  },
+  "54 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/diff/4.0.2",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "diff",
+      "rawSpec": "^4.0.1"
+    }
+  },
+  "55 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/make-error/1.3.6",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "make-error",
+      "rawSpec": "^1.1.1"
+    }
+  },
+  "56 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/yn/3.1.1",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "yn",
+      "rawSpec": "3.1.1"
+    }
+  },
+  "57 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/v8-compile-cache-lib/3.0.1",
+    "wanted": {
+      "dependentId": "/ts-node/10.9.2",
+      "name": "v8-compile-cache-lib",
+      "rawSpec": "^3.0.1"
+    }
+  },
+  "58 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/android-arm/0.17.19: wanted {\"cpu\":[\"arm\"],\"os\":[\"android\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "59 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/android-arm/0.17.19: wanted {\"cpu\":[\"arm\"],\"os\":[\"android\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/android-arm/0.17.19",
+      "name": "@esbuild/android-arm",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "60 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/android-arm/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/android-arm",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "61 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/android-arm/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "62 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/android-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"android\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "63 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/android-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"android\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/android-x64/0.17.19",
+      "name": "@esbuild/android-x64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "64 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/android-x64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/android-x64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "65 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/android-x64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "66 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/android-arm64/0.17.19: wanted {\"cpu\":[\"arm64\"],\"os\":[\"android\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "67 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/android-arm64/0.17.19: wanted {\"cpu\":[\"arm64\"],\"os\":[\"android\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/android-arm64/0.17.19",
+      "name": "@esbuild/android-arm64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "68 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/android-arm64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/android-arm64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "69 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/android-arm64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "70 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/darwin-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"darwin\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "71 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/darwin-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"darwin\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/darwin-x64/0.17.19",
+      "name": "@esbuild/darwin-x64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "72 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/darwin-x64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/darwin-x64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "73 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/darwin-x64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "74 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/freebsd-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"freebsd\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "75 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/freebsd-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"freebsd\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/freebsd-x64/0.17.19",
+      "name": "@esbuild/freebsd-x64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "76 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/freebsd-x64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/freebsd-x64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "77 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/freebsd-x64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "78 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/freebsd-arm64/0.17.19: wanted {\"cpu\":[\"arm64\"],\"os\":[\"freebsd\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "79 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/freebsd-arm64/0.17.19: wanted {\"cpu\":[\"arm64\"],\"os\":[\"freebsd\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/freebsd-arm64/0.17.19",
+      "name": "@esbuild/freebsd-arm64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "80 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/freebsd-arm64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/freebsd-arm64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "81 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/freebsd-arm64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "82 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/minimatch/3.1.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "83 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/minimatch/3.1.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "84 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ignore-by-default/1.0.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "85 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ignore-by-default/1.0.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "86 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chokidar/3.5.3",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "87 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chokidar/3.5.3",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "88 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/touch/3.1.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "89 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/touch/3.1.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "90 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pstree.remy/1.1.8",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "91 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pstree.remy/1.1.8",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "92 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/simple-update-notifier/2.0.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "93 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/simple-update-notifier/2.0.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "94 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/debug/4.3.4",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "95 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/debug/4.3.4",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "96 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/linux-arm/0.17.19: wanted {\"cpu\":[\"arm\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "97 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/linux-arm/0.17.19: wanted {\"cpu\":[\"arm\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/linux-arm/0.17.19",
+      "name": "@esbuild/linux-arm",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "98 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/linux-arm/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/linux-arm",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "99 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/linux-arm/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "100 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/linux-arm64/0.17.19: wanted {\"cpu\":[\"arm64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "101 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/linux-arm64/0.17.19: wanted {\"cpu\":[\"arm64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/linux-arm64/0.17.19",
+      "name": "@esbuild/linux-arm64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "102 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/linux-arm64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/linux-arm64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "103 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/linux-arm64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "104 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/linux-ia32/0.17.19: wanted {\"cpu\":[\"ia32\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "105 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/linux-ia32/0.17.19: wanted {\"cpu\":[\"ia32\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/linux-ia32/0.17.19",
+      "name": "@esbuild/linux-ia32",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "106 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/linux-ia32/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/linux-ia32",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "107 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/linux-ia32/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "108 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/7.5.4",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "109 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/7.5.4",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "110 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/undefsafe/2.0.5",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "111 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/undefsafe/2.0.5",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "112 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/supports-color/5.5.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "113 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/supports-color/5.5.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "114 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/linux-mips64el/0.17.19: wanted {\"cpu\":[\"mips64el\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "115 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/linux-mips64el/0.17.19: wanted {\"cpu\":[\"mips64el\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/linux-mips64el/0.17.19",
+      "name": "@esbuild/linux-mips64el",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "116 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/linux-mips64el/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/linux-mips64el",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "117 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/linux-mips64el/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "118 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/linux-loong64/0.17.19: wanted {\"cpu\":[\"loong64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "119 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/linux-loong64/0.17.19: wanted {\"cpu\":[\"loong64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/linux-loong64/0.17.19",
+      "name": "@esbuild/linux-loong64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "120 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/linux-loong64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/linux-loong64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "121 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/linux-loong64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "122 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/linux-ppc64/0.17.19: wanted {\"cpu\":[\"ppc64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "123 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/linux-ppc64/0.17.19: wanted {\"cpu\":[\"ppc64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/linux-ppc64/0.17.19",
+      "name": "@esbuild/linux-ppc64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "124 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/linux-ppc64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/linux-ppc64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "125 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/linux-ppc64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "126 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tsconfig/node14/1.0.3",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "127 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tsconfig/node14/1.0.3",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "128 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@cspotcode/source-map-support/0.8.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "129 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@cspotcode/source-map-support/0.8.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "130 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ms/2.1.2",
+    "wanted": {
+      "dependentId": "/debug/4.3.4",
+      "name": "ms",
+      "rawSpec": "2.1.2"
+    }
+  },
+  "131 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tsconfig/node10/1.0.9",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "132 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tsconfig/node10/1.0.9",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "133 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tsconfig/node16/1.0.4",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "134 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tsconfig/node16/1.0.4",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "135 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tsconfig/node12/1.0.11",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "136 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@tsconfig/node12/1.0.11",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "137 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/arg/4.1.3",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "138 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/arg/4.1.3",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "139 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/create-require/1.1.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "140 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/create-require/1.1.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "141 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/acorn/8.11.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "142 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/acorn/8.11.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "143 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/linux-riscv64/0.17.19: wanted {\"cpu\":[\"riscv64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "144 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/linux-riscv64/0.17.19: wanted {\"cpu\":[\"riscv64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/linux-riscv64/0.17.19",
+      "name": "@esbuild/linux-riscv64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "145 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/linux-riscv64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/linux-riscv64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "146 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/linux-riscv64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "147 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/linux-s390x/0.17.19: wanted {\"cpu\":[\"s390x\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "148 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/linux-s390x/0.17.19: wanted {\"cpu\":[\"s390x\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/linux-s390x/0.17.19",
+      "name": "@esbuild/linux-s390x",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "149 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/linux-s390x/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/linux-s390x",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "150 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/linux-s390x/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "151 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/acorn-walk/8.3.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "152 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/acorn-walk/8.3.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "153 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/linux-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "154 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/linux-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"linux\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/linux-x64/0.17.19",
+      "name": "@esbuild/linux-x64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "155 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/linux-x64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/linux-x64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "156 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/linux-x64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "157 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/v8-compile-cache-lib/3.0.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "158 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/v8-compile-cache-lib/3.0.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "159 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/yn/3.1.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "160 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/yn/3.1.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "161 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/make-error/1.3.6",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "162 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/make-error/1.3.6",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "163 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/diff/4.0.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "164 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/diff/4.0.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "165 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ms/2.1.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "166 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ms/2.1.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "167 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/netbsd-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"netbsd\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "168 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/netbsd-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"netbsd\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/netbsd-x64/0.17.19",
+      "name": "@esbuild/netbsd-x64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "169 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/netbsd-x64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/netbsd-x64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "170 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/netbsd-x64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "171 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/sunos-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"sunos\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "172 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/sunos-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"sunos\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/sunos-x64/0.17.19",
+      "name": "@esbuild/sunos-x64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "173 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/sunos-x64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/sunos-x64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "174 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/sunos-x64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "175 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/openbsd-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"openbsd\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "176 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/openbsd-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"openbsd\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/openbsd-x64/0.17.19",
+      "name": "@esbuild/openbsd-x64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "177 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/openbsd-x64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/openbsd-x64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "178 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/openbsd-x64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "179 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/win32-arm64/0.17.19: wanted {\"cpu\":[\"arm64\"],\"os\":[\"win32\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "180 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/win32-arm64/0.17.19: wanted {\"cpu\":[\"arm64\"],\"os\":[\"win32\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/win32-arm64/0.17.19",
+      "name": "@esbuild/win32-arm64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "181 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/win32-arm64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/win32-arm64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "182 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/win32-arm64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "183 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/win32-ia32/0.17.19: wanted {\"cpu\":[\"ia32\"],\"os\":[\"win32\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "184 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/win32-ia32/0.17.19: wanted {\"cpu\":[\"ia32\"],\"os\":[\"win32\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/win32-ia32/0.17.19",
+      "name": "@esbuild/win32-ia32",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "185 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/win32-ia32/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/win32-ia32",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "186 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/win32-ia32/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "187 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/@esbuild/win32-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"win32\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "188 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/@esbuild/win32-x64/0.17.19: wanted {\"cpu\":[\"x64\"],\"os\":[\"win32\"]} (current: {\"os\":\"darwin\",\"cpu\":\"arm64\"})",
+    "package": {
+      "id": "registry.npmjs.org/@esbuild/win32-x64/0.17.19",
+      "name": "@esbuild/win32-x64",
+      "version": "0.17.19"
+    },
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "reason": "unsupported_platform"
+  },
+  "189 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@esbuild/win32-x64/0.17.19",
+    "wanted": {
+      "dependentId": "/esbuild/0.17.19",
+      "name": "@esbuild/win32-x64",
+      "rawSpec": "0.17.19"
+    }
+  },
+  "190 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@esbuild/win32-x64/0.17.19",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "191 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tslib/2.6.2",
+    "wanted": {
+      "dependentId": "packages/web",
+      "name": "tslib",
+      "rawSpec": "^2.4.1"
+    }
+  },
+  "192 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tslib/2.6.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "193 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tslib/2.6.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "194 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-svelte/2.35.1",
+    "wanted": {
+      "dependentId": "packages/web",
+      "name": "eslint-plugin-svelte",
+      "rawSpec": "^2.30.0"
+    }
+  },
+  "195 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-svelte/2.35.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "196 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-svelte/2.35.1",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "197 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint/8.56.0",
+    "wanted": {
+      "dependentId": "packages/web",
+      "name": "eslint",
+      "rawSpec": "^8.28.0"
+    }
+  },
+  "198 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint/8.56.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "199 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint/8.56.0",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "found_in_store"
+  },
+  "200 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/svelte-check/3.6.2",
+    "wanted": {
+      "dependentId": "packages/web",
+      "name": "svelte-check",
+      "rawSpec": "^3.6.0"
+    }
+  },
+  "201 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/svelte-check/3.6.2",
+    "requester": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency",
+    "status": "resolved"
+  },
+  "202 warn pnpm:install-check": {
+    "message": "Unsupported engine for registry.npmjs.org/svelte/4.2.8: wanted: {\"node\":\">=16\"} (current: {\"node\":\"v14.17.0\",\"pnpm\":\"6.32.11\"})",
+    "prefix": "/Users/ganeshmani/Desktop/cloudnativemaster.com/file-upload-event-consistency"
+  },
+  "203 error pnpm": {
+    "code": "ERR_PNPM_UNSUPPORTED_ENGINE",
+    "packageId": "registry.npmjs.org/svelte/4.2.8",
+    "wanted": {
+      "node": ">=16"
+    },
+    "current": {
+      "node": "v14.17.0",
+      "pnpm": "6.32.11"
+    },
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "Unsupported engine for registry.npmjs.org/svelte/4.2.8: wanted: {\"node\":\">=16\"} (current: {\"node\":\"v14.17.0\",\"pnpm\":\"6.32.11\"})",
+      "code": "ERR_PNPM_UNSUPPORTED_ENGINE",
+      "stack": "pnpm: Unsupported engine for registry.npmjs.org/svelte/4.2.8: wanted: {\"node\":\">=16\"} (current: {\"node\":\"v14.17.0\",\"pnpm\":\"6.32.11\"})\n    at checkEngine (/snapshot/dist/pnpm.cjs)\n    at checkPackage (/snapshot/dist/pnpm.cjs)\n    at packageIsInstallable (/snapshot/dist/pnpm.cjs)\n    at resolveAndFetch (/snapshot/dist/pnpm.cjs)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)\n    at async resolveDependency (/snapshot/dist/pnpm.cjs)\n    at async resolveDependenciesOfDependency (/snapshot/dist/pnpm.cjs)\n    at async Promise.all (index 7)\n    at async resolveDependencies (/snapshot/dist/pnpm.cjs)\n    at async /snapshot/dist/pnpm.cjs"
+    }
+  }
+}
