@@ -6,3 +6,4 @@ fullstack-monorepo/node_modules
 fullstack-monorepo/packages/api/node_modules
 fullstack-monorepo/packages/types/node_modules
 fullstack-monorepo/packages/web/node_modules
+nodejs-ebs-deployment/node_modules
